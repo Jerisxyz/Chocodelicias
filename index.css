@@ -1,0 +1,314 @@
+*{
+    box-sizing: border-box;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+    background-color: white; /* O el color que tenga tu header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opcional: sombra sutil */
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+
+
+}
+
+
+
+header .logo{
+    font-weight: bold;
+    color: palevioletred;
+    font-size: 1.25em;
+
+}
+
+header .container{
+   padding: 30px 50px;
+}
+     
+
+
+
+header nav { 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom:20px 50px;
+    
+}
+
+header a{
+
+    padding: 10px 10px;
+    text-decoration: none;
+    color: black;
+}
+
+header a:hover{
+
+    color: palevioletred;
+}
+
+button{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0 ,0 ,0,0.5); 
+    border: 5px;
+    background-color: pink;
+    font-size: large;
+
+}
+
+button:hover{
+
+    color: palevioletred;
+    
+
+}
+
+#Anuncio{
+    color: white;
+    text-shadow: 2px 2px 0px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        
+        rgba(0, 0, 0,0.5)
+    )
+    ,url("Media/fresas.jpg");
+
+    
+}
+
+#Anuncio h1{
+
+    font-size: 60px;
+    font-family: 'Great Vibes', 'Quicksand','Playfair Display';
+}
+
+#somos-chocodelicias{
+    margin: 0%;
+    padding: 100px 12px;
+
+
+}
+
+.color-acento{
+    color: palevioletred;
+}
+
+#somos-chocodelicias .container{
+
+text-align: center;
+font-size: 20px;
+
+}
+
+
+#Anuncio-shop{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 200px;
+      width: 100%;
+      height: 100%;
+      background-image: url('Media/fondo\ fresas\ chocolate.jpg'); /* puedes usar tu imagen aquí */
+      background-size: cover;
+      background-position: center;
+      animation: zoom 20s infinite ease-in-out;
+      z-index: -1;
+      filter: brightness(0.7);
+
+
+}
+
+
+ @keyframes zoom {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+#Anuncio-shop form{
+
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+ .btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+      margin-top: 20px;
+      padding: 12px 50px;
+      font-size: 18px;
+      border: 2px solid rgb(255, 255, 255);
+      background-color: transparent;
+      color: white;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: white;
+      color: #c72c48;
+    }
+
+    .arrow {
+  display: inline-block;
+  margin-left: 8px;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+#Anuncio-shop{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+#Anuncio-shop .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(5px);
+      padding: 20px 60px;
+      border-radius: 20px;
+
+
+}
+
+#Anuncio-shop .container h2{
+
+    font-size: 60px;
+      color: #ffe4e1;
+      text-shadow: 2px 2px #000;
+}
+
+
+
+
+
+#shop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: pink;
+    
+}
+
+#shop h2{
+
+    padding: 15px;
+}
+
+#shop .caja{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(5px);
+      padding: 10px 40px;
+      border-radius: 20px;
+    border-radius: 50px;
+    padding: 50px 30px;
+    margin: 20px;
+    box-shadow: -2px -2px 20px black;
+
+}
+
+#shop h2{
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+#shop .caja .buy{
+        
+        align-items: center;
+        flex-direction: column;
+        padding: 10px 40px;
+        background-color: transparent;
+        cursor: pointer;
+        
+
+}
+
+#shop .caja .buy:hover{
+    background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(5px);
+        background-color: white;
+      color: #c72c48;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+    
+
+
+#shop .fresas{ 
+    
+    
+     height: 250px;
+     width: 330px;
+    border-radius: 15px;
+     
+    
+}
+
+
+
+
+footer {
+  background-color: #4E2A1E; /* Color chocolate */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+
+
+
+
+
