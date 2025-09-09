@@ -6,7 +6,7 @@ header{
     position: fixed;
     width: 100%;
     z-index: 1000; /* Asegura que esté por encima del contenido */
-    background-color: white; /* O el color que tenga tu header */
+    background-color: rgb(240, 228, 232); /* O el color que tenga tu header */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opcional: sombra sutil */
 }
 
@@ -64,18 +64,20 @@ header a:hover{
 button{
     font-size: 20px;
     font-weight: bold;
-    padding: 10px 10px;
+    padding: 20px 20px;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0 ,0 ,0,0.5); 
     border: 5px;
-    background-color: pink;
+    background-color: white;
+     transition: 0.3s ease;
     font-size: large;
-
+    cursor: pointer;
+    color: rgb(0, 0, 0);
 }
 
 button:hover{
-
-    color: palevioletred;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
     
 
 }
@@ -100,9 +102,15 @@ button:hover{
 }
 
 #Anuncio h1{
-
+    text-shadow: 2px 2px 12px  black;
     font-size: 60px;
     font-family: 'Great Vibes', 'Quicksand','Playfair Display';
+}
+
+
+#Anuncio h2{
+       text-shadow: 2px 2px 12px  black;
+
 }
 
 #somos-chocodelicias{
@@ -171,16 +179,16 @@ font-size: 20px;
       padding: 12px 50px;
       font-size: 18px;
       border: 2px solid rgb(255, 255, 255);
-      background-color: transparent;
-      color: white;
+      background-color: white;
+      color: black;
       border-radius: 12px;
       cursor: pointer;
       transition: 0.3s ease;
     }
 
     .btn:hover {
-      background-color: white;
-      color: #c72c48;
+      background-color: transparent;
+      color: #ffffff;
     }
 
     .arrow {
@@ -223,8 +231,9 @@ font-size: 20px;
 #Anuncio-shop .container h2{
 
     font-size: 60px;
-      color: #ffe4e1;
-      text-shadow: 2px 2px #000;
+      color: palevioletred;
+       text-shadow: 2px 2px 10px #000000;
+     
 }
 
 
@@ -241,14 +250,24 @@ font-size: 20px;
 
 #shop h2{
 
-    padding: 15px;
+    font-weight: bold;
+    font-size: 10px;
+    padding: 20px;
 }
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
 
 #shop .caja{
    display: flex;
    flex-direction: column;
    align-items: center;
-   background: rgba(255, 255, 255, 0.2);
+   background: rgba(255, 255, 255, 0.138);
       backdrop-filter: blur(5px);
       padding: 10px 40px;
       border-radius: 20px;
@@ -256,25 +275,45 @@ font-size: 20px;
     padding: 50px 30px;
     margin: 20px;
     box-shadow: -2px -2px 20px black;
-
+     transform: scale(1.03);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+  transition: 0.3s;
+    animation: fadeIn 0.8s ease-in-out;
+     cursor: pointer;
 }
 
 #shop h2{
+    font-weight: bold;
+    text-shadow: 2px 2px 12px palevioletred;
+    color: white;
+    font-size: 50px;
+    padding: 50px;
     display: flex;
    flex-direction: column;
    align-items: center;
+   animation: bounce 2s infinite;
 }
 
-#shop .caja .buy{
-        
-        align-items: center;
-        flex-direction: column;
-        padding: 10px 40px;
-        background-color: transparent;
-        cursor: pointer;
-        
-
+#shop h3{
+    color: rgb(0, 0, 0);
+    font-family: 'Fredoka One', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 20px;
 }
+
+#shop .button{
+
+    color: #c72c48;
+}
+
+
+
+button i {
+  margin-right: 8px;
+  color: #c72c48;
+}
+
 
 #shop .caja .buy:hover{
     background: rgba(255, 255, 255, 0.2);
@@ -288,7 +327,7 @@ font-size: 20px;
 
 #shop .fresas{ 
     
-    
+    box-shadow: 1px 1px 10px #000000;
      height: 250px;
      width: 330px;
     border-radius: 15px;
