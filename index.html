@@ -1,106 +1,97 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chocodelicias 🍓</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="icon" type="image/png" href="logo.jpg">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chocodelicias 🍓</title>
+  <link rel="icon" type="image/png" href="logo.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <!-- Navbar -->
-    <header class="navbar">
-        <div class="container nav-content">
-            <h1 class="logo">🍫 Chocodelicias</h1>
-            <nav id="nav-menu">
-                <a href="#Anuncio">Inicio</a>
-                <a href="#somos">Nosotros</a>
-                <a href="#shop">Tienda</a>
-            </nav>
-            <div class="cart-icon" id="cart-btn">
-                🛒 <span id="cart-count">0</span>
-            </div>
-            <button class="menu-toggle" id="menu-toggle">☰</button>
-        </div>
-    </header>
-
-    <main>
-        <!-- Hero -->
-        <section id="Anuncio" class="hero">
-            <div class="hero-content">
-                <h2>Dulce Tentación</h2>
-                <p>¡Dulzura que derrite corazones!</p>
-                <a href="https://www.instagram.com/danna_ospitia22/" target="_blank" class="btn-primary">Más información</a>
-            </div>
-        </section>
-
-        <!-- Sobre nosotros -->
-        <section id="somos" class="about container">
-            <h2>Somos <span class="highlight">Chocodelicias</span></h2>
-            <p>Creemos que no hay mejor forma de decir <em>“te quiero”</em> o <em>“te extraño”</em> que con el sabor irresistible del chocolate.  
-               Cuidamos cada detalle, desde la frescura de nuestras frutas hasta la calidad del chocolate. 🍓🍫</p>
-        </section>
-
-        <!-- Tienda -->
-        <section id="shop" class="shop container">
-            <h2>Nuestros productos</h2>
-            <div class="products">
-                <div class="product">
-  <img src="fresas-con-chocolates-rosadas.jpg" alt="Fresas con chocolate rosado">
-  <h3>Fresas Choco Rosadas</h3>
-  <p>$12.000</p>
-  <button 
-    class="btn-add"
-    data-name="Fresas Choco Rosadas"
-    data-price="12000"
-    data-img="fresas-con-chocolates-rosadas.jpg"
-  >
-    Agregar
-  </button>
-</div>
-
-<div class="product">
-  <img src="fresas-chocolate.jpg" alt="Fresas con chocolate tradicional">
-  <h3>Fresas Choco Tradicional</h3>
-  <p>$10.000</p>
-  <button 
-    class="btn-add"
-    data-name="Fresas Choco Tradicional"
-    data-price="10000"
-    data-img="fresas-chocolate.jpg"
-  >
-    Agregar
-  </button>
-</div>
-
-<div class="product">
-  <img src="fresas-caramelo.jpg" alt="Fresas con caramelo">
-  <h3>Fresas Caramelo</h3>
-  <p>$11.000</p>
-  <button 
-    class="btn-add"
-    data-name="Fresas Caramelo"
-    data-price="11000"
-    data-img="fresas-caramelo.jpg"
-  >
-    Agregar
-  </button>
-            </div>
-        </section>
-    </main>
-
-    <!-- Carrito flotante -->
-    <div id="cart-popup" class="cart-popup hidden">
-        <h3>🛒 Tu carrito</h3>
-        <ul id="cart-items"></ul>
-        <p><strong>Total: $<span id="cart-total">0</span></strong></p>
-        <button id="close-cart" class="btn-secondary">Cerrar</button>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <h1 class="logo">🍫 Chocodelicias</h1>
+      <nav id="nav-menu">
+        <a href="#Anuncio">Inicio</a>
+        <a href="#somos">Nosotros</a>
+        <a href="#shop">Tienda</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="cart-icon" id="cart-btn">🛒 <span id="cart-count">0</span></div>
+      <button class="menu-toggle" id="menu-toggle">☰</button>
     </div>
+  </header>
 
-    <footer>
-        <p>&copy; 2025 Chocodelicias. Todos los derechos reservados.</p>
-    </footer>
+  <main>
+    <!-- Hero -->
+    <section id="Anuncio" class="hero">
+      <div class="hero-content">
+        <h2>Dulce Tentación</h2>
+        <p>¡Dulzura que derrite corazones!</p>
+        <a href="#shop" class="btn-primary">Ver productos</a>
+      </div>
+    </section>
+
+    <!-- Sobre nosotros -->
+    <section id="somos" class="about container fade-in">
+      <h2>Somos <span class="highlight">Chocodelicias</span></h2>
+      <p>Creemos que no hay mejor forma de decir <em>“te quiero”</em> o <em>“te extraño”</em> que con el sabor irresistible del chocolate.  
+      Cuidamos cada detalle, desde la frescura de nuestras frutas hasta la calidad del chocolate. 🍓🍫</p>
+    </section>
+
+    <!-- Tienda -->
+    <section id="shop" class="shop container fade-in">
+      <h2>Nuestros productos</h2>
+      <div class="products">
+        <div class="product">
+          <img src="fresas-con-chocolates-rosadas.jpg" alt="Fresas con chocolate rosado">
+          <h3>Fresas Choco Rosadas</h3>
+          <p>$12.000</p>
+          <button class="btn-add" data-name="Fresas Choco Rosadas" data-price="12000" data-img="fresas-con-chocolates-rosadas.jpg">Agregar</button>
+        </div>
+
+        <div class="product">
+          <img src="fresas-chocolate.jpg" alt="Fresas con chocolate tradicional">
+          <h3>Fresas Choco Tradicional</h3>
+          <p>$10.000</p>
+          <button class="btn-add" data-name="Fresas Choco Tradicional" data-price="10000" data-img="fresas-chocolate.jpg">Agregar</button>
+        </div>
+
+        <div class="product">
+          <img src="fresas-caramelo.jpg" alt="Fresas con caramelo">
+          <h3>Fresas Caramelo</h3>
+          <p>$11.000</p>
+          <button class="btn-add" data-name="Fresas Caramelo" data-price="11000" data-img="fresas-caramelo.jpg">Agregar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contact fade-in">
+      <h2>Contáctanos</h2>
+      <p>📍 Bucaramanga, Colombia</p>
+      <p>📱 <a href="https://wa.me/573178385980" target="_blank">WhatsApp</a></p>
+      <p>📸 <a href="https://www.instagram.com/danna_ospitia22/" target="_blank">Instagram</a></p>
+    </section>
+  </main>
+
+  <!-- Carrito flotante -->
+  <div id="cart-popup" class="cart-popup hidden">
+    <h3>🛒 Tu carrito</h3>
+    <ul id="cart-items"></ul>
+    <p><strong>Total: $<span id="cart-total">0</span></strong></p>
+    <button id="clear-cart" class="btn-secondary">Vaciar carrito</button>
+    <button id="close-cart" class="btn-secondary">Cerrar</button>
+  </div>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/573178385980" target="_blank" class="whatsapp-float">💬</a>
+
+  <footer>
+    <p>&copy; 2025 Chocodelicias. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
