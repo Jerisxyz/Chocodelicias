@@ -1,354 +1,349 @@
-*{
-    box-sizing: border-box;
+
+:root {
+    --color-fondo: #fff8f3;
+    --color-primario: #5a3e2b;
+    --color-secundario: #f7b4a0;
+    --color-claro: #fff0e6;
+    --color-texto: #3b2e2a;
+    --color-blanco: #ffffff;
+    --sombra: 0 4px 10px rgba(0,0,0,0.1);
+    --transicion: all 0.3s ease;
 }
 
-header{
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    font-family: 'Fredoka One', cursive;
+    margin: 0.5em 0;
+    color: var(--color-primario);
+}
+
+.navbar {
+    background-color: var(--color-blanco);
     position: fixed;
     width: 100%;
-    z-index: 1000; /* Asegura que esté por encima del contenido */
-    background-color: rgb(240, 228, 232); /* O el color que tenga tu header */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opcional: sombra sutil */
+    top: 0;
+    box-shadow: var(--sombra);
+    z-index: 1000;
 }
 
-.nav {
+.nav-content {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    padding: 1em 2em;
 }
 
-
-
-body{
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-
-
+.logo {
+    font-family: 'Fredoka One';
+    font-size: 1.5rem;
+    color: var(--color-primario);
 }
 
-
-
-header .logo{
-    font-weight: bold;
-    color: palevioletred;
-    font-size: 1.25em;
-
-}
-
-header .container{
-   padding: 30px 50px;
-}
-     
-
-
-
-header nav { 
+nav {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    padding-bottom:20px 50px;
-    
+    gap: 1.5em;
 }
 
-header a{
-
-    padding: 10px 10px;
+nav a {
     text-decoration: none;
-    color: black;
+    color: var(--color-primario);
+    font-weight: 600;
+    position: relative;
+    transition: var(--transicion);
 }
 
-header a:hover{
-
-    color: palevioletred;
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--color-secundario);
+    transition: width 0.3s ease;
 }
 
-button{
-    font-size: 20px;
-    font-weight: bold;
-    padding: 20px 20px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0 ,0 ,0,0.5); 
-    border: 5px;
-    background-color: white;
-     transition: 0.3s ease;
-    font-size: large;
+nav a:hover::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: var(--color-primario);
     cursor: pointer;
-    color: rgb(0, 0, 0);
 }
 
-button:hover{
-    background-color: transparent;
-    color: rgb(255, 255, 255);
-    
-
+/* Carrito */
+.cart-icon {
+    font-size: 1.3rem;
+    cursor: pointer;
+    position: relative;
 }
 
-#Anuncio{
-    color: white;
-    text-shadow: 2px 2px 0px black;
+#cart-count {
+    background: var(--color-secundario);
+    border-radius: 50%;
+    color: var(--color-primario);
+    padding: 2px 7px;
+    font-size: 0.8rem;
+    position: absolute;
+    top: -8px;
+    right: -10px;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(90,62,43,0.4), rgba(90,62,43,0.6)), url('fresas-chocolate.jpg') center/cover no-repeat;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    flex-direction: column;
-    height: 90vh;
-    background-image: linear-gradient(
-        0deg,
-        
-        rgba(0, 0, 0,0.5)
-    )
-    ,url("fresas.jpg");
-
-    
+    color: var(--color-blanco);
+    padding: 2em;
+    margin-top: 70px;
 }
 
-#Anuncio h1{
-    text-shadow: 2px 2px 12px  black;
-    font-size: 60px;
-    font-family: 'Great Vibes', 'Quicksand','Playfair Display';
+.hero-content h2 {
+    font-size: 3rem;
+    color: var(--color-blanco);
 }
 
-
-#Anuncio h2{
-       text-shadow: 2px 2px 12px  black;
-
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 1.5em;
 }
 
-#somos-chocodelicias{
-    margin: 0%;
-    padding: 100px 12px;
-
-
+.btn-primary {
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    border: none;
+    padding: 0.8em 1.5em;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: var(--transicion);
 }
 
-.color-acento{
-    color: palevioletred;
+.btn-primary:hover {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
 }
 
-#somos-chocodelicias .container{
-
-text-align: center;
-font-size: 20px;
-
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 2em;
 }
 
-
-#Anuncio-shop{
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 200px;
-      width: 100%;
-      height: 100%;
-      background-image: url('fondo\ fresas\ chocolate.jpg'); /* puedes usar tu imagen aquí */
-      background-size: cover;
-      background-position: center;
-      animation: zoom 20s infinite ease-in-out;
-      z-index: -1;
-      filter: brightness(0.7);
-
-
-}
-
-
- @keyframes zoom {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.05);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-
-#Anuncio-shop form{
-
-    margin: 0;
-    padding: 0;
-    display: inline;
-}
-
- .btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-      margin-top: 20px;
-      padding: 12px 50px;
-      font-size: 18px;
-      border: 2px solid rgb(255, 255, 255);
-      background-color: white;
-      color: black;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: 0.3s ease;
-    }
-
-    .btn:hover {
-      background-color: transparent;
-      color: #ffffff;
-    }
-
-    .arrow {
-  display: inline-block;
-  margin-left: 8px;
-  animation: bounce 1s infinite;
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(5px);
-  }
-}
-
-#Anuncio-shop{
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-
-#Anuncio-shop .container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.about {
     text-align: center;
-      background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(5px);
-      padding: 20px 60px;
-      border-radius: 20px;
-
-
+    background-color: var(--color-claro);
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+    margin-top: 4em;
 }
 
-#Anuncio-shop .container h2{
-
-    font-size: 60px;
-      color: palevioletred;
-       text-shadow: 2px 2px 10px #000000;
-     
+.highlight {
+    color: var(--color-secundario);
 }
 
-
-
-
-
-#shop{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: pink;
-    
+.shop {
+    text-align: center;
+    margin-top: 3em;
 }
 
-#shop h2{
-
-    font-weight: bold;
-    font-size: 10px;
-    padding: 20px;
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2em;
+    margin-top: 2em;
 }
 
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+.product {
+    background-color: var(--color-blanco);
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+    padding: 1em;
+    transition: transform 0.3s ease;
 }
 
-
-
-#shop .caja{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   background: rgba(255, 255, 255, 0.138);
-      backdrop-filter: blur(5px);
-      padding: 10px 40px;
-      border-radius: 20px;
-    border-radius: 50px;
-    padding: 50px 30px;
-    margin: 20px;
-    box-shadow: -2px -2px 20px black;
-     transform: scale(1.03);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
-  transition: 0.3s;
-    animation: fadeIn 0.8s ease-in-out;
-     cursor: pointer;
+.product:hover {
+    transform: translateY(-5px);
 }
 
-#shop h2{
-    font-weight: bold;
-    text-shadow: 2px 2px 12px palevioletred;
-    color: white;
-    font-size: 50px;
-    padding: 50px;
-    display: flex;
-   flex-direction: column;
-   align-items: center;
-   animation: bounce 2s infinite;
-}
-
-#shop h3{
-    color: rgb(0, 0, 0);
-    font-family: 'Fredoka One', sans-serif;
-    font-weight: bold;
-    font-size: 25px;
-    padding: 20px;
-}
-
-#shop .button{
-
-    color: #c72c48;
-}
-
-
-
-button i {
-  margin-right: 8px;
-  color: #c72c48;
-}
-
-
-#shop .caja .buy:hover{
-    background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(5px);
-        background-color: white;
-      color: #c72c48;
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-    
-
-
-#shop .fresas{ 
-    
-    box-shadow: 1px 1px 10px #000000;
-     height: 250px;
-     width: 330px;
+.product img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
     border-radius: 15px;
-     
-    
 }
 
+.product h3 {
+    margin-top: 1em;
+}
 
+.product p {
+    font-weight: bold;
+    color: var(--color-primario);
+}
 
+.btn-add {
+    background: var(--color-secundario);
+    color: var(--color-primario);
+    border: none;
+    padding: 0.7em 1.2em;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transicion);
+}
+
+.btn-add:hover {
+    background: var(--color-primario);
+    color: var(--color-blanco);
+}
+
+.cart-popup {
+    position: fixed;
+    right: 20px;
+    top: 90px;
+    background: var(--color-blanco);
+    padding: 1em 1.5em;
+    border-radius: 15px;
+    box-shadow: var(--sombra);
+    width: 300px;
+    z-index: 2000;
+}
+
+.cart-popup.hidden {
+    display: none;
+}
+
+.cart-popup h3 {
+    text-align: center;
+    color: var(--color-primario);
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 1em 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#cart-items li {
+    border-bottom: 1px solid #ddd;
+    padding: 0.5em 0;
+    font-size: 0.95rem;
+}
+
+.btn-secondary {
+    width: 100%;
+    background: var(--color-secundario);
+    color: var(--color-primario);
+    border: none;
+    padding: 0.6em;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.btn-secondary:hover {
+    background: var(--color-primario);
+    color: var(--color-blanco);
+}
 
 footer {
-  background-color: #4E2A1E; /* Color chocolate */
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
+    background: var(--color-primario);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 1.2em;
+    margin-top: 3em;
+    font-size: 0.9rem;
 }
 
+@media (max-width: 768px) {
+    nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--color-blanco);
+        flex-direction: column;
+        text-align: center;
+        display: none;
+    }
 
+    nav.active {
+        display: flex;
+    }
 
+    .menu-toggle {
+        display: block;
+    }
+}
 
+.notificacion {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--color-secundario);
+    color: var(--color-primario);
+    padding: 0.8em 1.2em;
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    font-weight: bold;
+    z-index: 3000;
+}
 
+.notificacion.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.6em 0;
+    border-bottom: 1px solid #eee;
+}
 
+.cart-item img {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: var(--sombra);
+}
+
+.cart-item .info {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+}
+
+.cart-item .name {
+    font-weight: bold;
+    color: var(--color-primario);
+}
+
+.cart-item .precio {
+    font-size: 0.85rem;
+    color: #555;
+}
