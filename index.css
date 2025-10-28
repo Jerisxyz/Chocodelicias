@@ -109,7 +109,7 @@ nav a:hover::after {
 /* HERO */
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(90,62,43,0.4), rgba(90,62,43,0.6)), url('fresas-chocolate.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(90,62,43,0.4), rgba(90,62,43,0.6)), url('imgs/fondo-postres.jpg') center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
