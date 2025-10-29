@@ -389,6 +389,9 @@ nav a:hover::after {
   transition: transform 0.3s ease;
   z-index: 3000;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .whatsapp-float:hover {
